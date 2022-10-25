@@ -4,7 +4,9 @@ public class Main {
         task1();
         task2();
         task3();
+        task4();
     }
+
     public static int[] generateRandomArray() {
         java.util.Random random = new java.util.Random();
         int[] arr = new int[30];
@@ -13,6 +15,7 @@ public class Main {
         }
         return arr;
     }
+
     public static void task1() {
         int sum = 0;
         int[] arr = generateRandomArray();
@@ -21,6 +24,7 @@ public class Main {
         }
         System.out.println("Сумма трат за месяц составила " + sum + " рублей.");
     }
+
     public static void task2() {
         int[] arr = generateRandomArray();
         int maxExpenses = 0;
@@ -28,7 +32,7 @@ public class Main {
         //for (int i = 0; i < arr.length; i++) {
         for (int current : arr) {
             //int current = arr[i];
-            if (current > maxExpenses){
+            if (current > maxExpenses) {
                 maxExpenses = current;
             }
             if (current < minExpenses) {
@@ -37,6 +41,7 @@ public class Main {
         }
         System.out.println("Минимальная сумма трат за день составила " + minExpenses + "рублей. Максимальная сумма трат за день составила " + maxExpenses + "рублей.");
     }
+
     public static void task3() {
         int[] arr = generateRandomArray();
         int sumOfExpenses = 0;
@@ -46,10 +51,16 @@ public class Main {
                 sumOfExpenses += current;
             }
         }
-         averageExpenses = (double) sumOfExpenses / arr.length;
-        System.out.println("Средняя сумма трат за месяц составила " +  averageExpenses + " рублей.");
+        averageExpenses = (double) sumOfExpenses / arr.length;
+        System.out.println("Средняя сумма трат за месяц составила " + averageExpenses + " рублей.");
     }
 
+    public static void task4() {
+        char[] reverseFullName = {'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
+        for (int i = reverseFullName.length-1; i >= 0; i--) {
+            System.out.print(reverseFullName[i]);
+        }
+    }
 }
 
 
