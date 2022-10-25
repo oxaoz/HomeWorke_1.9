@@ -2,6 +2,7 @@ public class Main {
     public static void main(String[] args) {
         int[] arr = generateRandomArray();
         task1();
+        task2();
     }
     public static int[] generateRandomArray() {
         java.util.Random random = new java.util.Random();
@@ -19,9 +20,22 @@ public class Main {
         }
         System.out.println("Сумма трат за месяц составила " + sum + " рублей.");
     }
-
-
-
+    public static void task2() {
+        int[] arr = generateRandomArray();
+        int maxExpenses = 0;
+        int minExpenses = 200_000;
+        //for (int i = 0; i < arr.length; i++) {
+        for (int current : arr) {
+            //int current = arr[i];
+            if (current > maxExpenses){
+                maxExpenses = current;
+            }
+            if (current < minExpenses) {
+                minExpenses = current;
+            }
+        }
+        System.out.println("Минимальная сумма трат за день составила " + minExpenses + "рублей. Максимальная сумма трат за день составила " + maxExpenses + "рублей.");
+    }
 }
 
 
