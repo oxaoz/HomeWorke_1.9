@@ -3,6 +3,7 @@ public class Main {
         int[] arr = generateRandomArray();
         task1();
         task2();
+        task3();
     }
     public static int[] generateRandomArray() {
         java.util.Random random = new java.util.Random();
@@ -36,6 +37,19 @@ public class Main {
         }
         System.out.println("Минимальная сумма трат за день составила " + minExpenses + "рублей. Максимальная сумма трат за день составила " + maxExpenses + "рублей.");
     }
+    public static void task3() {
+        int[] arr = generateRandomArray();
+        int sumOfExpenses = 0;
+        double averageExpenses;
+        for (int current : arr) {
+            if (current > sumOfExpenses) {
+                sumOfExpenses += current;
+            }
+        }
+         averageExpenses = (double) sumOfExpenses / arr.length;
+        System.out.println("Средняя сумма трат за месяц составила " +  averageExpenses + " рублей.");
+    }
+
 }
 
 
