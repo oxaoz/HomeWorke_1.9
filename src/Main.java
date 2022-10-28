@@ -52,7 +52,8 @@ public class Main {
             }
         }
         averageExpenses = (double) sumOfExpenses / arr.length;
-        System.out.println("Средняя сумма трат за месяц составила " + averageExpenses + " рублей.");
+        System.out.print("Средняя сумма трат за месяц составила " + averageExpenses + " рублей.");
+        System.out. println();
     }
 
     public static void task4() {
